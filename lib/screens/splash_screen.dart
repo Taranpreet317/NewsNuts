@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-// import 'package:news_app/screens/text_animation.dart';
-// import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:news_app/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
