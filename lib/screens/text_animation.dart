@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-// import 'package:news_app/screens/home_screen.dart';
+
 
 class TextAnimation extends StatefulWidget {
   @override
@@ -9,16 +9,7 @@ class TextAnimation extends StatefulWidget {
 
 class TextAnimationState extends State<TextAnimation> {
   @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   Future.delayed(Duration(seconds: 3), () {
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => HomeScreen()),
-  //     );
-  //   });
-  // }
+
 
   @override
   Widget build(BuildContext context) {
