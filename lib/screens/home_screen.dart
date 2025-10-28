@@ -1,8 +1,7 @@
-// import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import '../api/api_service.dart';
 import '../models/news_article.dart';
-// import 'dart:ui';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -35,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void _onSearch(String query) {
     setState(() {
       if (query.trim().isEmpty) return;
-      // searchQuery = query.trim().isEmpty ? null : query;
+     
       searchQuery = query;
       futureNews = ApiService().fetchNews(query: searchQuery);
     });
@@ -63,21 +62,21 @@ class _HomeScreenState extends State<HomeScreen> {
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                // fontStyle: FontStyle.italic,
+               
                 color: Colors.white,
               ),
             ),
             SizedBox(height: 8),
             Container(
               height: 40,
-              // width: double.infinity,
+             
               child: TextField(
                 onSubmitted: _onSearch,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
-                  // fontFamily: 'Roboto',
+                 
                 ),
                 decoration: InputDecoration(
                   hintText: "Search news...",
@@ -176,57 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// Widget buildNewsCard(NewsArticle article) {
-//   return Card(
-//     margin: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-//     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-//     elevation: 3,
-//     child: Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-// if (article.imageUrl.isNotEmpty)
-//   ClipRRect(
-//     borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-//     child: Image.network(
-//       article.imageUrl,
-//       width: double.infinity,
-//       height: 200,
-//       fit: BoxFit.cover,
-//       errorBuilder:
-//           (context, error, stackTrace) => Container(
-//             height: 200,
-//             color: Colors.grey[300],
-//             child: Center(child: Icon(Icons.broken_image)),
-//           ),
-//     ),
-//   ),
-//         Padding(
-//           padding: const EdgeInsets.all(12.0),
-//           child: Card(
-//             elevation: 24,
-//             color: Colors.blue,
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 Text(
-//                   article.title,
-//                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-//                 ),
-//                 SizedBox(height: 6),
-//                 Text(
-//                   article.description,
-//                   style: TextStyle(color: Colors.black87),
-// maxLines: 3,
-// overflow: TextOverflow.ellipsis,
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ],
-//     ),
-//   );
-// }
+
 
 Widget shimmerCardDesign() {
   return Stack(
@@ -300,11 +249,7 @@ Widget cardDesign(context, NewsArticle article) {
           child: InkWell(
             onTap: () async {
               final url = Uri.parse(article.link);
-              // if (article.link.isEmpty) {
-              //   print("Empty link found");
-              // }
-
-              // print("URL: ${article.link}");
+           
 
               if (await canLaunchUrl(url)) {
                 await launchUrl(url, mode: LaunchMode.externalApplication);
@@ -318,8 +263,7 @@ Widget cardDesign(context, NewsArticle article) {
               color: Colors.black,
               elevation: 20,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.start,
-                // crossAxisAlignment: CrossAxisAlignment.start,
+             
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
