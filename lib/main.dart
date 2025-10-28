@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-// import 'package:news_app/screens/home_screen.dart';
+
 import 'package:news_app/screens/splash_screen.dart';
 
 Future<void> main() async {
@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      // ),
+    
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
